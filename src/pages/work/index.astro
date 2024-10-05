@@ -1,0 +1,17 @@
+---
+import Head from '@components/Head.astro';
+import Wrapper from '@components/Wrapper.astro';
+import Layout from '@layouts/Layout.astro';
+import { siteName } from 'site-setting';
+
+const title = `Work | ${siteName}`;
+const description = 'AstroでWebサイトを作るためのテンプレートのWorkページです';
+---
+
+<Layout>
+  <Head slot="head" title={title} description={description} path="work/" />
+
+  <Wrapper>
+    <p>トップページ</p>
+  </Wrapper>
+</Layout>

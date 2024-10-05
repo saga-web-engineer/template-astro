@@ -1,0 +1,24 @@
+{
+  "extends": [
+    "stylelint-config-standard-scss",
+    "stylelint-config-recess-order",
+    "stylelint-prettier/recommended",
+    "stylelint-config-html"
+  ],
+
+  "plugins": ["stylelint-prettier"],
+
+  "ignoreFiles": [
+    "**/node_ modules/**",
+    "dist/**",
+    "src/styles/_reset.scss",
+    "src/styles/tool/_variables.scss"
+  ],
+
+  "rules": {
+    "prettier/prettier": null,
+    "keyframes-name-pattern": null,
+    "selector-class-pattern": null,
+    "scss/no-global-function-names": null
+  }
+}

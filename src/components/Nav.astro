@@ -1,0 +1,38 @@
+---
+interface Nav {
+  href: string;
+  label: string;
+}
+
+const navs: Nav[] = [
+  {
+    href: '/',
+    label: 'Top',
+  },
+  {
+    href: '/work/',
+    label: 'Work',
+  },
+];
+---
+
+<nav>
+  <ul class="list">
+    {
+      navs.map((nav) => (
+        <li>
+          <a href={nav.href}>{nav.label}</a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>
+
+<style>
+  .list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+  }
+</style>

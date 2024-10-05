@@ -1,0 +1,11 @@
+@use './tool/' as *;
+
+.u-dn {
+  display: none;
+
+  &\:md {
+    @include responsive(md) {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,62 @@
+@use './tool/' as *;
+
+@font-face {
+  font-family: 'Noto Sans JP';
+  font-style: normal;
+  font-weight: 400;
+  src:
+    url('/fonts/NotoSansJP-Regular.woff2') format('woff2'),
+    url('/fonts/NotoSansJP-Regular.woff') format('woff');
+  font-display: swap;
+}
+
+:root {
+  // color
+  --white-color-primary: #fff;
+  --black-color-primary: #333;
+  --black-color-secondary: #000;
+  --gray-color-primary: #505050;
+  --gray-color-secondary: #ebebeb;
+  --gray-color-tertiary: #cac9c9;
+  --gray-color-quaternary: #b4b4b4;
+  --brown-color-primary: #5e3528;
+  --brown-color-secondary: #fffcf7;
+  --yellow-color-primary: #ffdc1b;
+  --red-color-primary: #ec3348;
+  --green-color-primary: #3cbb84;
+  --shadow-color: rgb(16 18 39 / 30%);
+
+  // font
+  --font-gothic: 'Noto Sans JP', sans-serif;
+  --font-mincho: 'Noto Serif JP', serif;
+
+  // easing
+  --easing-hover: ease-in-out;
+  --easing-faded: cubic-bezier(0, 0, 0.2, 1);
+  --easing-overlay: cubic-bezier(0.39, 0.575, 0.565, 1);
+
+  // duration
+  --duration-primary: 0.3s;
+}
+
+// :target {
+//   scroll-margin-top: 120px;
+// }
+
+html {
+  // scroll-behavior: smooth;
+  -webkit-font-smoothing: subpixel-antialiased;
+  -moz-osx-font-smoothing: auto;
+}
+
+body {
+  overflow-x: clip;
+  font-family: var(--font-gothic);
+  font-size: clamp(rem(14px), rem(10px) + 1.04vw, rem(18px));
+  font-weight: 400;
+  line-height: 1.85;
+  color: var(--black-color-primary);
+  letter-spacing: 0.125em;
+  background-color: var(--background-color-default);
+  text-size-adjust: 100%;
+}

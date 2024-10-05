@@ -1,0 +1,14 @@
+---
+const { ...rest } = Astro.props;
+---
+
+<div class="wrapper" {...rest}>
+  <slot />
+</div>
+
+<style lang="scss">
+  .wrapper {
+    inline-size: min(90%, 1200px);
+    margin-inline: auto;
+  }
+</style>

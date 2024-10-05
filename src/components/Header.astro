@@ -1,0 +1,26 @@
+---
+import Nav from '@components/Nav.astro';
+import Wrapper from '@components/Wrapper.astro';
+import { siteName } from 'site-setting';
+---
+
+<header class="header">
+  <Wrapper class="wrapper">
+    <h1>{siteName}</h1>
+    <Nav />
+  </Wrapper>
+</header>
+
+<style lang="scss">
+  .header {
+    border: solid 1px var(--black-color-primary);
+    block-size: 80px;
+  }
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    block-size: 100%;
+  }
+</style>
