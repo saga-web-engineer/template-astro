@@ -1,5 +1,6 @@
 ---
 import Head from '@components/Head.astro';
+import Heading from '@components/Heading.astro';
 import Wrapper from '@components/Wrapper.astro';
 import Layout from '@layouts/Layout.astro';
 import { SITE_NAME } from 'site-settings';
@@ -12,6 +13,14 @@ const description = 'AstroでWebサイトを作るためのテンプレート';
   <Head slot="head" title={title} description={description} />
 
   <Wrapper>
-    <p>トップページ</p>
+    <section>
+      <Heading ja="トップページ" en="top" />
+    </section>
   </Wrapper>
 </Layout>
+
+<style>
+  section {
+    padding-block: min(16.67vw, 100px);
+  }
+</style>
