@@ -3,10 +3,12 @@ import { defineConfig } from "astro/config";
 
 import { siteUrl } from "./site-setting";
 
+import sitemap from "@astrojs/sitemap";
+
 // https://astro.build/config
 export default defineConfig({
   site: siteUrl,
-  integrations: [],
+  integrations: [sitemap()],
   vite: {
     css: {
       preprocessorOptions: {
