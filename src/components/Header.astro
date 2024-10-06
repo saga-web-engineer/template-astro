@@ -1,12 +1,12 @@
 ---
 import Nav from '@components/Nav.astro';
 import Wrapper from '@components/Wrapper.astro';
-import { siteName } from 'site-setting';
+import { SITE_NAME } from 'site-settings';
 ---
 
 <header class="header">
   <Wrapper class="wrapper">
-    <h1>{siteName}</h1>
+    <h1>{SITE_NAME}</h1>
     <Nav />
   </Wrapper>
 </header>

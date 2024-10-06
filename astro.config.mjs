@@ -1,13 +1,12 @@
+import sitemap from "@astrojs/sitemap";
 // @ts-check
 import { defineConfig } from "astro/config";
 
-import { siteUrl } from "./site-setting";
-
-import sitemap from "@astrojs/sitemap";
+import { SITE_URL } from "./site-settings";
 
 // https://astro.build/config
 export default defineConfig({
-  site: siteUrl,
+  site: SITE_URL,
   integrations: [sitemap()],
   vite: {
     css: {
